@@ -8,14 +8,21 @@ header{
 }
 
 footer{
+    background-color: #161616;
     #staffLink{
         font-family: "League Gothic", sans-serif;
     }
     h2{
+        color: #E97C2C;
         font-family: "League Gothic", sans-serif;
+        font-size: 1.2rem;
+    }
+    div{
+        background-color: white;
     }
     a{
         color: black;
+        background-color: white;
     }
     h3, p, a{
         font-family: Verdana, sans-serif;

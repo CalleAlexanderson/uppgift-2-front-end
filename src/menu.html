@@ -6,30 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/universalStyle.scss">
     <link rel="stylesheet" href="css/header_footer.scss">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/menu.scss">
+    <script type="module" src="js/customer_js/menu.js"></script>
     <title>Meny</title>
 </head>
 
 <body>
+    <header>
+        <a href="index.html">Hot ‘N’ Heavy</a>
+        <img src="images/hotnheavy_logo-svg.svg" alt="">
+        <a href="menu.html">Meny</a>
+    </header>
     <main>
         <h1>Meny</h1>
-        <select name="" id="">
-            <option value="Starters">Förrätter</option>
-            <option value="Kids meals">Barnmeny</option>
-            <option value="Burgers/sandwich">Hamburgare och mackor</option>
-            <option value="Steaks">Kött</option>
-            <option value="Chicken">Kyckling</option>
+        <label for="choseMenu">Menyer:</label>
+        <select name="choseMenu" class="choseMenu">
+            <option value="Förrätter">Förrätter</option>
+            <option value="Barnmeny">Barnmeny</option>
+            <option value="Burgare">Burgare</option>
+            <option value="Kött">Kött</option>
+            <option value="Kyckling">Kyckling</option>
             <option value="Ribs">Ribs</option>
-            <option value="Salads">Sallader</option>
-            <option value="specials">Specialrätter</option>
-            <option value="Side dishes">Tillägg</option>
-            <option value="Combo plates">Combo tallrickar</option>
-            <option value="Drinks">Drickor</option>
-            <option value="Deserts">Efterrätter</option>
+            <option value="Sallader">Sallader</option>
+            <option value="Specialrätter">Specialrätter</option>
+            <option value="Tillägg">Tillägg</option>
+            <option value="Combo Tallrickar">Combo tallrickar</option>
+            <option value="Drickor">Drickor</option>
+            <option value="Efterrätter">Efterrätter</option>
         </select>
         <a href="#dietRestrictions">Kostrestriktioner</a>
-        <section>
-            <h2></h2>
+        <section class="menu">
+            <h2>Förrätter</h2>
+            <section>
+                <h3>Friterat</h3>
+                <ul>
+                    <li>
+                        <h4>Lökringar</h4>
+                        <p class="desc">serveras med valfri dippsås</p>
+                        <p class="price">39</p>
+                    </li>
+                    <li>
+                        <h4>Mozarella sticks</h4>
+                        <p class="desc"></p>
+                        <p class="price">39</p>
+                    </li>
+                    <li>
+                        <h4>
+                            <h4>Kyckling vingar</h4>
+                            <p class="desc">serveras med valfri dippsås</p>
+                            <p class="price">49</p>
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>Scampi</h4>
+                        <p class="desc">serveras med valfri dippsås</p>
+                        <p class="price">69</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Sallader</h3>
+                <ul>
+                    <li>
+                        <h4>Gurksallad</h4>
+                        <p class="desc">gurka och strimlad rödlök</p>
+                        <p class="price">35</p>
+                    </li>
+                    <li>
+                        <h4>Bondsallad</h4>
+                        <p class="desc">finhackad lök, gurka, tomat och paprika</p>
+                        <p class="price">39</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Bröd</h3>
+                <ul>
+                    <li>
+                        <h4>Breadsticks</h4>
+                        <p class="desc">serveras med valfri dippsås</p>
+                        <p class="price">29</p>
+                    </li>
+                    <li>
+                        <h4>Vitlöksbröd</h4>
+                        <p class="desc"></p>
+                        <p class="price">39</p>
+                    </li>
+                    <li>
+                        <h4>Mini mackor</h4>
+                        <p class="desc">isbergssallad, tomat, ost och rökt skinka</p>
+                        <p class="price">69</p>
+                    </li>
+                </ul>
+            </section>
         </section>
         <section id="dietRestrictions">
             <h2>Meny markörer:</h2>
@@ -43,6 +115,22 @@
             </ul>
         </section>
     </main>
+    <footer>
+        <h2>Hot ‘N’ Heavy</h2>
+        <div>
+            <h3>Här finns vi </h3>
+            <p>Sparbanksvägen 18 <br>
+                Stockholm 129 32
+            </p>
+        </div>
+        <a id="staffLink" href="current_menu.html">Ändra meny</a>
+        <div>
+            <h3>Kontakta oss</h3>
+            <p>Tel: <a href="tel:+086702304">08 670 23 04 </a> <br>
+                mail: <a href="mailto:info@hotnheavy.com">info@hotnheavy.com</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
