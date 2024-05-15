@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+main {
+  background-color: #282828;
+  h2 {
+    font-family: "Nanum Gothic", sans-serif;
+    color: black;
+    // textshadow outline tagen härifrån: https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/
+    text-shadow: -1px 1px 0 #e97c2c, 1px 1px 0 #e97c2c, 1px -1px 0 #e97c2c,
+      -1px -1px 0 #e97c2c;
+  }
+}
+
+h1 {
+  font-family: "Nanum Gothic", sans-serif;
+  color: black;
+  // textshadow outline tagen härifrån: https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/
+  text-shadow: -1px 1px 0 #e97c2c, 1px 1px 0 #e97c2c, 1px -1px 0 #e97c2c,
+    -1px -1px 0 #e97c2c;
+}
