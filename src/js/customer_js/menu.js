@@ -1,5 +1,4 @@
 // Globala konstanter och variabler
-import menuItems from '../../../menu.json';
 let starters = [];
 let chicken = [];
 let salads = [];

@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/universalStyle.scss">
     <link rel="stylesheet" href="css/header_footer.scss">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/login.scss">
+    <script type="module" src="js/staff_js/login.js"></script>
     <title>Logga in</title>
 </head>
+
 <body>
-    <main>
-        <h1>Logga in</h1>
-    </main>
+    <div>
+        <header>
+            <a href="index.html">Hot ‘N’ Heavy</a>
+            <img src="images/hotnheavy_logo-svg.svg" alt="">
+            <a href="menu.html">Meny</a>
+        </header>
+        <main>
+            <h1>Logga in</h1>
+            <p id="loginMsg">&#8203;</p>
+            <form id="loginForm">
+                <label for="userName">Användarnamn:</label><br>
+                <input type="text" name="userName" autocomplete="off"><br><br>
+                <label for="password">Lösenord:</label><br>
+                <input type="password" name="password"><br><br>
+                <button type="submit">Logga in</button>
+            </form>
+        </main>
+    </div>
 </body>
+
 </html>

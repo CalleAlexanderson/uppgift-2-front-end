@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+body{
+  background-color: #1E1E1E;
+  >div{
+    margin: auto;
+    max-width: 800px;
+  }
+}
+
 .hidden {
   visibility: hidden;
 }
