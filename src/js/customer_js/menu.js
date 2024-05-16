@@ -22,6 +22,14 @@ function init() {
     selectMenu.addEventListener('change', () => {
         choseMenu(selectMenu.value)
     });
+    getMenu();
+} // Slut init
+window.addEventListener('load', init);
+// --------------------------------------------------
+
+async function getMenu() {
+    const response = await fetch(`http://127.0.0.1:3000/menu`);
+    const menuItems = await response.json();
 
     // skapar en array för varje meny
     for (let index = 0; index < menuItems.length; index++) {
@@ -40,23 +48,8 @@ function init() {
             default: kidsMeals.push(menuItems[index]); break;
         }
     }
-
-    console.log(starters);
-    console.log(chicken);
-    console.log(salads);
-    console.log(deserts);
-    console.log(specials);
-    console.log(sides);
-    console.log(burgers);
-    console.log(steaks);
-    console.log(comboPlates);
-    console.log(drinks);
-    console.log(ribs);
-    console.log(kidsMeals);
     showMenu(starters)
-} // Slut init
-window.addEventListener('load', init);
-// --------------------------------------------------
+}
 
 function choseMenu(value) {
     let tempArr = []
