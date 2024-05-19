@@ -7,16 +7,39 @@ main {
     background-color: #161616;
 
     .price::after {
-        content: ":-";
+      content: ":-";
     }
   }
 }
 
-.menu{
-    background-color: white;
-    h4{
-        font-weight: normal;
-    }
+.menu {
+  background-color: white;
+  min-height: 100px;
+  h4 {
+    font-weight: normal;
+  }
+}
+
+.addBtn,
+.removeBtn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.removeBtn {
+  background-color: #ff0000;
+}
+
+.addBtn {
+  background-color: #00ff38;
 }
 
 #dietRestrictions {

@@ -8,9 +8,40 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap" rel="stylesheet">
     <script type="module" src="js/staff_js/current_menu.js"></script>
+    <link rel="stylesheet" href="css/menu.scss">
+    <link rel="stylesheet" href="css/staff_menu.scss">
+    <script type="module" src="js/customer_js/menu.js"></script>
     <title>Nuvarande meny</title>
 </head>
 <body>
-    <h1>Nuvarande meny</h1>
+    <img src="images/Cross.svg" class="hidden" alt="check">
+    <div>
+        <header>
+            <a href="current_menu.html">Nuvarande meny</a>
+            <img src="images/hotnheavy_logo-svg.svg" alt="">
+            <a href="add_to_menu.html">Lägg till på meny</a>
+        </header>
+        <main>
+            <h1>Nuvarande meny</h1>
+            <label for="choseMenu">Menyer:</label>
+            <select name="choseMenu" class="choseMenu">
+                <option value="Förrätter">Förrätter</option>
+                <option value="Barnmeny">Barnmeny</option>
+                <option value="Burgare">Burgare</option>
+                <option value="Kött">Kött</option>
+                <option value="Kyckling">Kyckling</option>
+                <option value="Ribs">Ribs</option>
+                <option value="Sallader">Sallader</option>
+                <option value="Specialrätter">Specialrätter</option>
+                <option value="Tillägg">Tillägg</option>
+                <option value="Combo Tallrickar">Combo tallrickar</option>
+                <option value="Drickor">Drickor</option>
+                <option value="Efterrätter">Efterrätter</option>
+            </select>
+            <a href="old_menu_items.html">Borttagna rätter</a>
+            <section class="menu">
+            </section>
+        </main>
+    </div>
 </body>
 </html>

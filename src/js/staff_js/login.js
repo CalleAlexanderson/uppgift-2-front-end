@@ -38,9 +38,9 @@ async function logIn(userParams) {
         
         // kollar om user skickats tillbaka
         if (res.user != undefined) {
-            sessionStorage.setItem("user", res.user[0].fullname)
+            localStorage.setItem("user", res.user[0].fullname)
             localStorage.setItem("token", res.token)
-            console.log(sessionStorage.getItem("user"));
+            console.log(localStorage.getItem("user"));
             console.log(localStorage.getItem("token"));
             redirect();
         } else {

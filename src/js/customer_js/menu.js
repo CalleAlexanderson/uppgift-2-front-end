@@ -70,6 +70,7 @@ function choseMenu(value) {
 }
 
 function showMenu(chosenMenu) {
+    let title = document.title;
     menuDiv.innerHTML = "";
     let categories = [];
     let h2 = document.createElement('h2');
@@ -84,7 +85,10 @@ function showMenu(chosenMenu) {
         }
     }
     console.log(categories);
-
+    //sorterar meny efter pris
+    chosenMenu = chosenMenu.sort((a, b) =>
+        a.cost > b.cost ? 1 : -1
+    );
     // skapar en section för varje kategori
     for (let index = 0; index < categories.length; index++) {
 
@@ -99,6 +103,7 @@ function showMenu(chosenMenu) {
             if (chosenMenu[i].category == categories[index]) {
 
                 let li = document.createElement('li');
+                li.classList.add(chosenMenu[i].menu, chosenMenu[i].category)
                 // skapar en variabel som kommer bli namnet
                 let itemName = chosenMenu[i].name;
                 console.log(itemName);
@@ -122,6 +127,7 @@ function showMenu(chosenMenu) {
                 }
 
                 let h4 = document.createElement('h4');
+                h4.id = chosenMenu[i].name;
                 h4.innerHTML = itemName;
 
                 let desc = document.createElement('p');
@@ -132,13 +138,62 @@ function showMenu(chosenMenu) {
                 price.innerHTML = chosenMenu[i].cost;
                 price.classList.add("price");
 
+
+                console.log(title);
+
+
                 li.appendChild(h4);
                 li.appendChild(desc);
                 li.appendChild(price);
+                let btn = document.createElement("button")
+                let btnImg = document.createElement("img")
+                switch (title) {
+                    case "Nuvarande meny":
+                        btn.classList.add("removeBtn")
+                        btn.addEventListener('click', () => {
+                            removeFromMenu(li)
+                        })
+                        btnImg.src = "Cross.301d9322.svg"
+                        btn.appendChild(btnImg)
+                        li.appendChild(btn)
+
+                        break;
+                    default: break;
+                }
                 ul.appendChild(li);
             }
         }
         sect.appendChild(ul);
         menuDiv.appendChild(sect);
     }
+}
+
+async function removeFromMenu(liItem) {
+    console.log(liItem);
+    console.log(liItem.children[0].id);
+    console.log(Number(liItem.children[2].innerText));
+    console.log(liItem.classList[0]);
+    console.log(liItem.classList[1]);
+    let user = localStorage.getItem("user");
+    console.log(user);
+    let menuItem = {
+        "user": user,
+        "name": liItem.children[0].id,
+        "cost": Number(liItem.children[2].innerText),
+        "menu": liItem.classList[0],
+        "category": liItem.classList[1],
+    }
+    console.log(menuItem);
+
+    const response = await fetch(`http://127.0.0.1:3000/removefrommenu`, {
+        method: "DELETE",
+        headers: {
+            "content-type": "Application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify(menuItem)
+    });
+    const res = await response.json();
+    console.log(res)
+    liItem.remove();
 }
