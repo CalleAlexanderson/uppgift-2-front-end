@@ -75,6 +75,10 @@ function showMenu(chosenMenu) {
     let categories = [];
     let h2 = document.createElement('h2');
     console.log(chosenMenu);
+    if (chosenMenu.length == 0) {
+        menuDiv.innerHTML = "<p class='menuMsg'> Denna meny har inga rätter</p>"
+        return;
+    }
     h2.innerHTML = chosenMenu[0].menu;
 
     // gör en array med alla kategorier på menyn

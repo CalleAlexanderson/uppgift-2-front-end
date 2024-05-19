@@ -15,12 +15,6 @@ let menuDiv;
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
 function init() {
-    console.log("funkar");
-    if (!localStorage.getItem("token")) {
-        window.location.href = "login.html"
-    } else {
-        checkToken();
-    }
     menuDiv = document.getElementsByClassName("menu")[0];
     let selectMenu = document.getElementsByClassName('choseMenu')[0];
     console.log(selectMenu.value);
@@ -31,22 +25,6 @@ function init() {
 } // Slut init
 window.addEventListener('load', init);
 // --------------------------------------------------
-
-async function checkToken() {
-    token = localStorage.getItem("token");
-    const response = await fetch(`http://127.0.0.1:3000/checktoken`, {
-        method: "GET",
-        headers: {
-            "content-type": "Application/json",
-            "Authorization": "Bearer " + token
-        }
-    });
-    const res = await response.json();
-    console.log(res.message);
-    if (res.message == "not correct JWT") {
-        window.location.href = "login.html"
-    }
-}
 
 async function getMenu() {
     const response = await fetch(`http://127.0.0.1:3000/shelvedmenu`);
@@ -96,6 +74,10 @@ function showMenu(chosenMenu) {
     let categories = [];
     let h2 = document.createElement('h2');
     console.log(chosenMenu);
+    if (chosenMenu.length == 0) {
+        menuDiv.innerHTML = "<p class='menuMsg'> Denna meny har inga rätter</p>"
+        return;
+    }
     h2.innerHTML = chosenMenu[0].menu;
 
     // gör en array med alla kategorier på menyn
