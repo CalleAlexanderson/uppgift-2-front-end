@@ -2,6 +2,7 @@
 let starters = [];
 let chicken = [];
 let salads = [];
+let fish = [];
 let deserts = [];
 let specials = [];
 let sides = [];
@@ -36,6 +37,7 @@ async function getMenu() {
             case "Förrätter": starters.push(menuItems[index]); break;
             case "Kyckling": chicken.push(menuItems[index]); break;
             case "Sallader": salads.push(menuItems[index]); break;
+            case "Fisk": fish.push(menuItems[index]); break;
             case "Efterrätter": deserts.push(menuItems[index]); break;
             case "Specialrätter": specials.push(menuItems[index]); break;
             case "Tillägg": sides.push(menuItems[index]); break;
@@ -56,6 +58,7 @@ function choseMenu(value) {
         case "Förrätter": tempArr = starters; break;
         case "Kyckling": tempArr = chicken; break;
         case "Sallader": tempArr = salads; break;
+        case "Fisk": tempArr = fish; break;
         case "Efterrätter": tempArr = deserts; break;
         case "Specialrätter": tempArr = specials; break;
         case "Tillägg": tempArr = sides; break;
