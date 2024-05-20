@@ -24,10 +24,11 @@
             <a href="add_to_menu.html">Lägg till på meny</a>
         </header>
         <main>
+            <h1>Lägg till på meny</h1>
             <form id="addForm">
                 <div id="name_div">
                     <label for="foodName">Namn på rätt:</label><br>
-                    <input type="text" name="foodName"><br><br>
+                    <input type="text" name="foodName" required><br><br>
                 </div>
                 <div class="formDiv">
                     <label for="choseMenu">Menyer:</label><br>
@@ -76,9 +77,9 @@
                 </div>
                 <div class="formDiv">
                     <label for="cost">Pris:</label><br>
-                    <input type="text" name="cost" id="cost"><br><br>
+                    <input type="text" name="cost" id="cost" required><br><br>
                     <label for="category">Kategori:</label><br>
-                    <input type="text" name="category" id="category">
+                    <input type="text" name="category" id="category" required>
                 </div>
                 <div id="textarea_div">
                     <label for="desc">Beskrivning på menyn:</label>

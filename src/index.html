@@ -7,19 +7,47 @@
     <link rel="stylesheet" href="css/universalStyle.scss">
     <link rel="stylesheet" href="css/header_footer.scss">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
+        rel="stylesheet">
+    <script type="module" src="js/customer_js/review.js"></script>
+    <link rel="stylesheet" href="css/index.scss">
     <title>Hot N Heavy</title>
 </head>
 
 <body>
+    <img src="images/star_filled.svg" class="hidden" alt="check">
     <div>
         <header>
             <a href="index.html">Hot ‘N’ Heavy</a>
-            <a href="index.html" aria-label="Tillbaks till startsidan"><img src="images/hotnheavy_logo-svg.svg" alt="Restaurangens logotyp"></a>
+            <a href="index.html" aria-label="Tillbaks till startsidan"><img src="images/hotnheavy_logo-svg.svg"
+                    alt="Restaurangens logotyp"></a>
             <a href="menu.html">Meny</a>
         </header>
-        <main> 
-        <h1>Hot ‘N’ Heavy</h1>
+        <main>
+            <h1>Hot ‘N’ Heavy</h1>
+            <h2>Lämna en review</h2>
+            <section id="review">
+                <form id="reviewForm">
+                    <label for="reviewer">Namn:</label><br>
+                    <input type="text" name="reviewer" required><br><br>
+                    <label for="comment">Kommentar:</label><br>
+                    <textarea name="comment" required></textarea><br><br>
+                    <div id="star_div">
+                        <button type="button" class="starBtn" id="1"><img src="images/star.svg"
+                                alt="en stjärna"></button>
+                        <button type="button" class="starBtn" id="2"><img src="images/star.svg"
+                                alt="två stjärnor"></button>
+                        <button type="button" class="starBtn" id="3"><img src="images/star.svg"
+                                alt="tre stjärnor"></button>
+                        <button type="button" class="starBtn" id="4"><img src="images/star.svg"
+                                alt="fyra stjärnor"></button>
+                        <button type="button" class="starBtn" id="5"><img src="images/star.svg"
+                                alt="fem stjärnor"></button>
+                    </div>
+                    <p id="starMsg">&nbsp;</p>
+                    <button type="submit">Skapa review</button>
+                </form>
+            </section>
         </main>
         <footer>
             <h2>Hot ‘N’ Heavy</h2>

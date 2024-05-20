@@ -7,6 +7,7 @@ form {
     grid-template-columns: 50% 50%;
     background-color: white;
     input, textarea, select, div>div, button{
+        border: solid 1px black;
         background-color: #EFEFEF;
         padding: 3px;
     }
@@ -38,6 +39,7 @@ form {
         font-size: 1.2rem;
         border-radius: 8px;
         background-color: #E97C2C;
+        border: 2px solid black;
         grid-area: 4/1/4/3;
     }
 }

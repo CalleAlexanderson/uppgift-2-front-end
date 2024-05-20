@@ -63,13 +63,6 @@ function formatData(params) {
                 break;
         }
     }
-    // gör -1 eftersom textarea(description) kan lämnas blankt
-    for (let index = 0; index < menuItemData.length-1; index++) {
-        if (menuItemData[index] == '') {
-            alert("fyll i allt")
-            return;
-        }
-    }
     let newItem = {
         "user": localStorage.getItem("user"),
         "name": menuItemData[0],
