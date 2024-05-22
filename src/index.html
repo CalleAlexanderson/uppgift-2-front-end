@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script type="module" src="js/customer_js/review.js"></script>
     <link rel="stylesheet" href="css/index.scss">
     <title>Hot N Heavy</title>
@@ -18,20 +19,39 @@
     <img src="images/star_filled.svg" class="hidden" alt="check">
     <div>
         <header>
-            <a href="index.html">Hot ‘N’ Heavy</a>
-            <a href="index.html" aria-label="Tillbaks till startsidan"><img src="images/hotnheavy_logo-svg.svg"
+            <a href="index.html" class="headerLink">Hot ‘N’ Heavy</a>
+            <a href="index.html" aria-label="Tillbaks till startsidan" id="logo"><img src="images/hotnheavy_logo-svg.svg"
                     alt="Restaurangens logotyp"></a>
-            <a href="menu.html">Meny</a>
+            <a href="menu.html" class="headerLink">Meny</a>
         </header>
         <main>
             <h1>Hot ‘N’ Heavy</h1>
+
+            <p id="info">Vi är en familjerestaurang där allting lagas in-house, alla rätter, alla såser och dipp görs
+                färskt
+                till
+                beställning. Vårat motto är att alltid ge dig som kund färsk mat i stora portioner så du alltid
+                lämnar
+                oss nöjda.
+                <br><br>
+                All bbq görs med antigen någon av våra Meadow Creek TS500 eller Meadow Creek BBQ144 och röks med
+                olika
+                träslag beroende på kött.
+            </p>
+
+            <div id="showReviews">
+                <p>Reviews</p>
+            </div>
+            <div id="reviews">
+            </div>
             <h2>Lämna en review</h2>
             <section id="review">
                 <form id="reviewForm">
+                    <br>
                     <label for="reviewer">Namn:</label><br>
                     <input type="text" name="reviewer" required><br><br>
                     <label for="comment">Kommentar:</label><br>
-                    <textarea name="comment" required></textarea><br><br>
+                    <textarea name="comment" required></textarea><br>
                     <div id="star_div">
                         <button type="button" class="starBtn" id="1"><img src="images/star.svg"
                                 alt="en stjärna"></button>
@@ -51,7 +71,7 @@
         </main>
         <footer>
             <h2>Hot ‘N’ Heavy</h2>
-            <div>
+            <div id="footerDiv1">
                 <h3>Här finns vi </h3>
                 <p>Sparbanksvägen 18 <br>
                     Stockholm 129 32
@@ -60,7 +80,7 @@
             <a id="staffLink" href="current_menu.html">Ändra meny</a>
             <!-- måste ha länken här annars kan jag inte använda den i js -->
             <a class="hidden" href="login.html">login</a>
-            <div>
+            <div id="footerDiv2">
                 <h3>Kontakta oss</h3>
                 <p>Tel: <a href="tel:+086702304">08 670 23 04 </a> <br>
                     mail: <a href="mailto:info@hotnheavy.com">info@hotnheavy.com</a>
