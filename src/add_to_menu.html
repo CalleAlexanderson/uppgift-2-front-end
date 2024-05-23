@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script type="module" src="js/staff_js/add_to_menu.js"></script>
     <script type="module" src="js/staff_js/check_access.js"></script>
     <link rel="stylesheet" href="css/add_to_menu.scss">
@@ -29,62 +29,71 @@
             <form id="addForm">
                 <div id="name_div">
                     <label for="foodName">Namn på rätt:</label><br>
-                    <input type="text" name="foodName" required><br><br>
+                    <input type="text" name="foodName" id="foodName" autocomplete="off" required><br><br>
                 </div>
                 <div class="formDiv">
-                    <label for="choseMenu">Menyer:</label><br>
-                    <select name="choseMenu" id="chose_menu">
-                        <option value="Förrätter">Förrätter</option>
-                        <option value="Barnmeny">Barnmeny</option>
-                        <option value="Burgare">Burgare</option>
-                        <option value="Kött">Kött</option>
-                        <option value="Kyckling">Kyckling</option>
-                        <option value="Fisk">Fisk</option>
-                        <option value="Ribs">Ribs</option>
-                        <option value="Sallader">Sallader</option>
-                        <option value="Specialrätter">Specialrätter</option>
-                        <option value="Tillägg">Tillägg</option>
-                        <option value="Combo Tallrickar">Combo tallrickar</option>
-                        <option value="Drickor">Drickor</option>
-                        <option value="Efterrätter">Efterrätter</option>
-                    </select>
-                    <button type="button" id="restrict_btn" aria-label="Öpnna/stäng kostrestriktions menyn">Kostrestriktioner</button>
-                    <div id="restrict_menu" class="dropdownHidden" aria-hidden="true">
-                        <div>
-                            <label for="pork">Fläskkött:</label>
-                            <input type="checkbox" name="pork" id="pork">
-                        </div>
-                        <div>
-                            <label for="gluten">Gluten:</label>
-                            <input type="checkbox" name="gluten" id="gluten">
-                        </div>
-                        <div>
-                            <label for="nuts">Nötter:</label>
-                            <input type="checkbox" name="nuts" id="nuts">
-                        </div>
-                        <div>
-                            <label for="vegan">Vegansk:</label>
-                            <input type="checkbox" name="vegan" id="vegan">
-                        </div>
-                        <div>
-                            <label for="fish">Fisk och/eller skaldjur:</label>
-                            <input type="checkbox" name="fish" id="fish">
-                        </div>
-                        <div>
-                            <label for="dairy">Möjlkprodukter:</label>
-                            <input type="checkbox" name="dairy" id="dairy">
+                    <div>
+                        <label for="chose_menu">Menyer:</label><br>
+                        <select name="choseMenu" id="chose_menu">
+                            <option value="Förrätter">Förrätter</option>
+                            <option value="Barnmeny">Barnmeny</option>
+                            <option value="Burgare">Burgare</option>
+                            <option value="Kött">Kött</option>
+                            <option value="Kyckling">Kyckling</option>
+                            <option value="Fisk">Fisk</option>
+                            <option value="Ribs">Ribs</option>
+                            <option value="Sallader">Sallader</option>
+                            <option value="Specialrätter">Specialrätter</option>
+                            <option value="Tillägg">Tillägg</option>
+                            <option value="Combo Tallrickar">Combo tallrickar</option>
+                            <option value="Drickor">Drickor</option>
+                            <option value="Efterrätter">Efterrätter</option>
+                        </select><br><br><br>
+                    </div>
+                    <div>
+                        <button type="button" id="restrict_btn"
+                            aria-label="Öpnna/stäng kostrestriktions menyn">Kostrestriktioner <span>🞃</span></button>
+                        <div id="restrict_menu" class="dropdownHidden" aria-hidden="true">
+                            <div>
+                                <label for="pork">Fläskkött:</label>
+                                <input type="checkbox" name="pork" id="pork">
+                            </div>
+                            <div>
+                                <label for="gluten">Gluten:</label>
+                                <input type="checkbox" name="gluten" id="gluten">
+                            </div>
+                            <div>
+                                <label for="nuts">Nötter:</label>
+                                <input type="checkbox" name="nuts" id="nuts">
+                            </div>
+                            <div>
+                                <label for="vegan">Vegansk:</label>
+                                <input type="checkbox" name="vegan" id="vegan">
+                            </div>
+                            <div>
+                                <label for="fish">Fisk och/eller skaldjur:</label>
+                                <input type="checkbox" name="fish" id="fish">
+                            </div>
+                            <div>
+                                <label for="dairy">Möjlkprodukter:</label>
+                                <input type="checkbox" name="dairy" id="dairy">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="formDiv">
-                    <label for="cost">Pris:</label><br>
-                    <input type="text" name="cost" id="cost" required><br><br>
-                    <label for="category">Kategori:</label><br>
-                    <input type="text" name="category" id="category" required>
+                    <div>
+                        <label for="cost">Pris:</label><br>
+                        <input type="text" name="cost" id="cost" required autocomplete="off"><br><br>
+                    </div>
+                    <div>
+                        <label for="category">Kategori:</label><br>
+                        <input type="text" name="category" id="category" required  autocomplete="off">
+                    </div>
                 </div>
                 <div id="textarea_div">
                     <label for="desc">Beskrivning på menyn:</label>
-                <textarea name="desc" id="desc"></textarea>
+                    <textarea name="desc" id="desc"></textarea>
                 </div>
                 <button type="submit">Lägg till</button>
             </form>

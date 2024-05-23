@@ -40,27 +40,13 @@ function formatData(params) {
     // lägger till kostrekstriktioner i en array
     for (let index = 0; index < params.length; index++) {
         switch (params[index][0]) {
-            case "pork":
-                restricts.push("pork")
-                break;
-            case "gluten":
-                restricts.push("gluten")
-                break;
-            case "nuts":
-                restricts.push("nuts")
-                break;
-            case "vegan":
-                restricts.push("vegan")
-                break;
-            case "fish":
-                restricts.push("fish")
-                break;
-            case "dairy":
-                restricts.push("dairy")
-                break;
-            default:
-                menuItemData.push(params[index][1])
-                break;
+            case "pork": restricts.push("pork"); break;
+            case "gluten": restricts.push("gluten"); break;
+            case "nuts": restricts.push("nuts"); break;
+            case "vegan": restricts.push("vegan"); break;
+            case "fish": restricts.push("fish"); break;
+            case "dairy": restricts.push("dairy"); break;
+            default: menuItemData.push(params[index][1]); break;
         }
     }
     let newItem = {
@@ -77,13 +63,13 @@ function formatData(params) {
 
 async function addToMenu(newMenuItem) {
     const response = await fetch(`http://127.0.0.1:3000/addtomenu`, {
-            method: "POST",
-            headers: {
-                "content-type": "Application/json",
-                "Authorization": "Bearer "+token
-            },
-            body: JSON.stringify(newMenuItem)
-        });
-        const res = await response.json();
-        console.log(res);
+        method: "POST",
+        headers: {
+            "content-type": "Application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify(newMenuItem)
+    });
+    const res = await response.json();
+    console.log(res);
 }

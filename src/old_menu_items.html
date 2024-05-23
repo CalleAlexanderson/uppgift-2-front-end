@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/universalStyle.scss">
     <link rel="stylesheet" href="css/header_footer.scss">
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Nanum+Gothic&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script type="module" src="js/staff_js/old_menu_items.js"></script>
     <script type="module" src="js/staff_js/check_access.js"></script>
@@ -14,36 +16,43 @@
     <link rel="stylesheet" href="css/staff_menu.scss">
     <title>Borttagna rätter</title>
 </head>
+
 <body>
     <img src="images/Check.svg" class="hidden" alt="check">
     <div>
         <header>
             <a href="current_menu.html" class="headerLink">Nuvarande meny</a>
-            <a href="index.html" aria-label="Tillbaks till startsidan"><img src="images/hotnheavy_logo-svg.svg" alt="Restaurangens logotyp"></a>
+            <a href="index.html" aria-label="Tillbaks till startsidan"><img src="images/hotnheavy_logo-svg.svg"
+                    alt="Restaurangens logotyp"></a>
             <a href="add_to_menu.html" class="headerLink">Lägg till på meny</a>
         </header>
         <main>
             <h1>Borttagna rätter</h1>
-            <label for="choseMenu">Menyer:</label>
-            <select name="choseMenu" class="choseMenu">
-                <option value="Förrätter">Förrätter</option>
-                <option value="Barnmeny">Barnmeny</option>
-                <option value="Burgare">Burgare</option>
-                <option value="Kött">Kött</option>
-                <option value="Kyckling">Kyckling</option>
-                <option value="Fisk">Fisk</option>
-                <option value="Ribs">Ribs</option>
-                <option value="Sallader">Sallader</option>
-                <option value="Specialrätter">Specialrätter</option>
-                <option value="Tillägg">Tillägg</option>
-                <option value="Combo Tallrickar">Combo tallrickar</option>
-                <option value="Drickor">Drickor</option>
-                <option value="Efterrätter">Efterrätter</option>
-            </select>
-            <a href="current_menu.html">Nuvarande meny</a>
+            <div>
+                <div>
+                    <label for="choseMenu">Menyer:</label><br>
+                    <select name="choseMenu" class="choseMenu">
+                        <option value="Förrätter">Förrätter</option>
+                        <option value="Barnmeny">Barnmeny</option>
+                        <option value="Burgare">Burgare</option>
+                        <option value="Kött">Kött</option>
+                        <option value="Kyckling">Kyckling</option>
+                        <option value="Fisk">Fisk</option>
+                        <option value="Ribs">Ribs</option>
+                        <option value="Sallader">Sallader</option>
+                        <option value="Specialrätter">Specialrätter</option>
+                        <option value="Tillägg">Tillägg</option>
+                        <option value="Combo Tallrickar">Combo tallrickar</option>
+                        <option value="Drickor">Drickor</option>
+                        <option value="Efterrätter">Efterrätter</option>
+                    </select>
+                </div>
+                <a href="current_menu.html"><span>Nuvarande meny</span></a>
+            </div>
             <section class="menu">
             </section>
         </main>
     </div>
 </body>
+
 </html>

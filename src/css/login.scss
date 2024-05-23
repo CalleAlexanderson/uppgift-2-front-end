@@ -1,9 +1,24 @@
 main{
+    form{
+        color: white;
+        margin: 0 auto;
+        width: 200px;
+        label{
+            font-size: 1.1rem;
+        }
+        input{
+            width: 200px;
+            padding: 5px;
+            font-size: 1.1rem;
+        }
+    }
     button{
+        display: block;
+        margin: 0 auto;
         background-color: #161616;
         border: solid 1px #E97C2C;
         color: white;
-        width: 80px;
+        width: 100px;
         height: 30px;
         border-radius: 5px;
         font-size: 1.1rem;

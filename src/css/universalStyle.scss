@@ -28,6 +28,10 @@ body{
   position: fixed;
 }
 
+textarea{
+  resize: none;
+}
+
 main {
   position: relative;
   background-color: #282828;

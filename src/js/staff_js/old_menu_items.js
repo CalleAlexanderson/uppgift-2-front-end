@@ -169,13 +169,7 @@ function showMenu(chosenMenu) {
 }
 
 async function addBackToMenu(liItem) {
-    console.log(liItem);
-    console.log(liItem.children[0].id);
-    console.log(Number(liItem.children[2].innerText));
-    console.log(liItem.classList[0]);
-    console.log(liItem.classList[1]);
     let user = localStorage.getItem("user");
-    console.log(user);
     let menuItem = {
         "user": user,
         "name": liItem.children[0].id,
@@ -183,7 +177,6 @@ async function addBackToMenu(liItem) {
         "menu": liItem.classList[0],
         "category": liItem.classList[1],
     }
-    console.log(menuItem);
     const response = await fetch(`http://127.0.0.1:3000/addbacktomenu`, {
         method: "PUT",
         headers: {
