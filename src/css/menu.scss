@@ -1,32 +1,109 @@
 main {
   color: white;
-  h3 {
-    color: black;
-  }
   li {
-    background-color: #161616;
-
-    .price::after {
-      content: ":-";
+    list-style: none;
+  }
+  > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 10%;
+    div {
+      width: 35%;
+      min-width: 120px;
+      select {
+        font-size: 1.1rem;
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+    a {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      position: relative;
+      background-color: white;
+      display: block;
+      width: 35%;
+      min-width: 120px;
+      color: black;
+      span {
+        text-decoration: underline;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translate(0, -50%);
+      }
     }
   }
 }
 
 .menu {
+  width: 80%;
+  margin: 0 10%;
   background-color: white;
   min-height: 100px;
   position: relative;
-  h4 {
-    font-weight: normal;
+  padding-bottom: 10px;
+  section {
+    margin: 10px auto;
+    width: 90%;
+    h3 {
+      color: black;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    ul {
+      li {
+        border-radius: 5px;
+        position: relative;
+        background-color: #282828;
+        margin: 10px;
+        .price::after {
+          content: ":-";
+        }
+        .price {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+        }
+        .desc {
+          width: 70%;
+          padding-bottom: 30px;
+        }
+        > * {
+          padding: 5px 10px;
+        }
+        h4 {
+          font-weight: normal;
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
 
-.menuMsg{
+@media screen and (min-width: 701px) {
+  .menu {
+    section {
+      ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        li {
+          width: 90%;
+          margin: 5px auto;
+        }
+      }
+    }
+  }
+}
+
+.menuMsg {
   color: #981111;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .addBtn,
@@ -36,6 +113,10 @@ main {
   height: 30px;
   border: 1px solid black;
   border-radius: 4px;
+  position: absolute;
+  padding: 0 !important;
+  right: 5px;
+  top: 5px;
 
   img {
     width: 100%;
@@ -52,5 +133,15 @@ main {
 }
 
 #dietRestrictions {
+  padding-top: 10px;
+  width: 80%;
+  margin: 0 10%;
   background-color: #161616;
+  ul {
+    display: block;
+    li{
+      padding: 5px 10px;
+      font-size: 1.2rem;
+    }
+  }
 }

@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #C36520; 
+}
+
 body{
   background-color: #1E1E1E;
   >div{
