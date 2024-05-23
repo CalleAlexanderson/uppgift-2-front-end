@@ -16,7 +16,7 @@ header {
   height: 80px;
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 701px) {
   header {
     .headerLink {
       font-size: 1.5rem;
@@ -24,7 +24,7 @@ header {
   }
   footer {
     display: grid;
-    grid-template-columns: auto 80px auto;
+    grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
     grid-template-rows: 40px auto !important;
     #staffLink {
       grid-area: 2/2/2/3;
