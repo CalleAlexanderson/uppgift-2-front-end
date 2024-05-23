@@ -43,7 +43,7 @@ async function getMenu() {
             case "Tillägg": sides.push(menuItems[index]); break;
             case "Burgare": burgers.push(menuItems[index]); break;
             case "Kött": steaks.push(menuItems[index]); break;
-            case "Combo Tallrickar": comboPlates.push(menuItems[index]); break;
+            case "Combo_Tallrickar": comboPlates.push(menuItems[index]); break;
             case "Drickor": drinks.push(menuItems[index]); break;
             case "Ribs": ribs.push(menuItems[index]); break;
             default: kidsMeals.push(menuItems[index]); break;
@@ -64,7 +64,7 @@ function choseMenu(value) {
         case "Tillägg": tempArr = sides; break;
         case "Burgare": tempArr = burgers; break;
         case "Kött": tempArr = steaks; break;
-        case "Combo Tallrickar": comboPlates = starters; break;
+        case "Combo Tallrickar": tempArr = comboPlates; break;
         case "Drickor": tempArr = drinks; break;
         case "Ribs": tempArr = ribs; break;
         default: tempArr = kidsMeals; break;
