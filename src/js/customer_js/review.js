@@ -4,6 +4,7 @@ let starValue;
 let reviewsDiv;
 let reviewsDivBtn;
 let reviews;
+let word = ['en stjärna', 'två sjtärnor', 'tre sjtärnor', 'fyra sjtärnor', 'fem sjtärnor']
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
 function init() {
@@ -100,7 +101,6 @@ function rate() {
     document.getElementById('starMsg').innerHTML = "&nbsp;";
     console.log(+this.id);
     starValue = +this.id;
-    let word = ['en stjärna', 'två sjtärnor', 'tre sjtärnor', 'fyra sjtärnor', 'fem sjtärnor']
     for (let index = 0; index < starBtns.length; index++) {
         starBtns[index].innerHTML = `<img src='star.fa806e3c.svg' alt='${word[index]}'>`
     }
@@ -134,5 +134,10 @@ async function postReview(reviewParams) {
     const res = await response.json();
     console.log(res);
     document.getElementById('starMsg').innerHTML = "Review skapad, tack för din feedback";
+    document.getElementById('comment').value = "";
+    document.getElementById('reviewer').value = "";
+    for (let index = 0; index < starBtns.length; index++) {
+        starBtns[index].innerHTML = `<img src='star.fa806e3c.svg' alt='${word[index]}'>`
+    }
     getReviews();
 }
