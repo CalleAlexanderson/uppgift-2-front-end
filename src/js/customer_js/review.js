@@ -62,7 +62,6 @@ async function showReviews() {
                 oldNr2 = oldNr;
                 oldNr = nr;
             }
-            console.log(nr);
             let art = document.createElement("article");
             let h3 = document.createElement('h3')
             h3.innerText = reviews[nr].name;
@@ -99,7 +98,6 @@ async function showReviews() {
 
 function rate() {
     document.getElementById('starMsg').innerHTML = "&nbsp;";
-    console.log(+this.id);
     starValue = +this.id;
     for (let index = 0; index < starBtns.length; index++) {
         starBtns[index].innerHTML = `<img src='star.fa806e3c.svg' alt='${word[index]}'>`
@@ -111,8 +109,6 @@ function rate() {
 
 async function postReview(reviewParams) {
     document.getElementById('starMsg').innerHTML = "&nbsp;";
-    console.log(reviewParams);
-    console.log(typeof starValue);
     if (starValue == undefined) {
         document.getElementById('starMsg').innerHTML = "Ange ett betyg med stjärnorna";
         return;
@@ -136,6 +132,7 @@ async function postReview(reviewParams) {
     document.getElementById('starMsg').innerHTML = "Review skapad, tack för din feedback";
     document.getElementById('comment').value = "";
     document.getElementById('reviewer').value = "";
+    starValue = undefined;
     for (let index = 0; index < starBtns.length; index++) {
         starBtns[index].innerHTML = `<img src='star.fa806e3c.svg' alt='${word[index]}'>`
     }
