@@ -72,4 +72,5 @@ async function addToMenu(newMenuItem) {
     });
     const res = await response.json();
     console.log(res);
+    alert("Rätt tillagd på meny")
 }
